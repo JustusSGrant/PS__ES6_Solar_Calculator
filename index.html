@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Untitled Document</title>
+        <link href="css/styles.css" rel="stylesheet" type="text/css"> 
+    </head>
+    <body>
+        <nav>
+            <div class="keepOpen"></div>
+        </nav>
+        <main>
+            <h1>Calculator</h1>
+            <form name="solarForm" action="" method="post">
+                <fieldset id="mpc">
+                    <legend>Monthly Power Consumption</legend>
+                    <p>In order to accurately calculate your solar needs, we need to know how much
+                        power you use. Please enter the last 12 months of electrical usage below.
+                    </p>
+                    <label><span>January</span><input name="jan" type="number" value="0">kWh</label><br />
+                    <label><span>February</span><input name="feb" type="number" value="0">kWh</label><br />
+                    <label><span>March</span><input name="mar" type="number" value="0">kWh</label><br />
+                    <label><span>April</span><input name="apr" type="number" value="0">kWh</label><br />
+                    <label><span>May</span><input name="may" type="number" value="0">kWh</label><br />
+                    <label><span>June</span><input name="jun" type="number" value="0">kWh</label><br />
+                    <label><span>July</span><input name="jul" type="number" value="0">kWh</label><br />
+                    <label><span>August</span><input name="aug" type="number" value="0">kWh</label><br />
+                    <label><span>September</span><input name="sep" type="number" value="0">kWh</label><br />
+                    <label><span>October</span><input name="oct" type="number" value="0">kWh</label><br />
+                    <label><span>November</span><input name="nov" type="number" value="0">kWh</label><br />
+                    <label><span>December</span><input name="dec" type="number" value="0">kWh</label><br />
+            </fieldset>
+
+            <fieldSet>
+                <legend>Sunshine Zone</legend>
+                <figure><img src="images/US-Solar-Zone-Map.jpg"></figure>
+                <p>Please use this map to determine which zone you are in</p>
+                <select name="zone">
+                        <option>Zone 1</option>
+                        <option>Zone 2</option>
+                        <option>Zone 3</option>
+                        <option>Zone 4</option>
+                        <option>Zone 5</option>
+                        <option>Zone 6</option>
+                </select>
+            </fieldSet>
+
+            <fieldset><legend>Panel Choice</legend>
+                <p>Please Select a solar panel you would like to use.</p>
+                <select name="panel">
+                    <option value="250">Axitec AC-250P/156-60S</option>
+                    <option value="275">Canadian Solar CS6K-275M</option>
+                    <option value="260">Hanwha Q.Pro BFR-G4.260</option>
+                </select>
+            </fieldset>
+            </form>
+
+            <button onclick="calculateSolar()">Calculate Solar Needs</button>
+            <h2>Solar Reccomendation</h2>
+            <div id="feedback">
+                <p>Enter your information above to calculate your solar needs.</p>
+            </div>
+        </main>
+        <footer>
+            <p>
+                Created by Paul Cheney for a Pluralsight course on Javascript
+            </p>
+        </footer>
+    </body>
+    <script type="text/javascript" src="js/main.js"></script>
+</html>
